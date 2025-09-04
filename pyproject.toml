@@ -1,0 +1,7 @@
+[project]
+name = "github-copilot-demo"
+version = "0.1.0"
+description = "This code shows some of the capabilities of github copilot in VSCode"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
