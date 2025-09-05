@@ -28,7 +28,7 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
 ### Clone Repo and Open in VSCode
 1. In the VSCode terminal navigate to the folder you want to contain your repository
 2. Clone the repository
-    * `git clone https://github.com/FloTechnologiesData/github_copilot_demo.git`
+    * `git clone https://github.com/tchase56/github_copilot_demo.git`
 3. In the VSCode File Explorer and select the cloned repository folder (github_copilot_demo)
     * ![Select repo folder using VSCode File Explorer](screenshots/vscode_file_explorer.png)
 
@@ -112,9 +112,13 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
     * ![Explanation of snake game code 1](screenshots/code_explanation_1.png)
     * ![Explanation of snake game code 2](screenshots/code_explanation_2.png)
     * This is an example of the natural language chat feature. 
-* Gameplay image
+* Gameplay image snake
     * ![Image of Snake Game](screenshots/snake_gameplay.png)
         * This is an image of snake travelling downwards next to a piece of food.
+* Bonus gameplay image space invaders (similarly vibe coded)
+    * ![Image of Space Invaders Game](screenshots/space_invaders.png)
+        * This is an image of the space invaders (M's) being shot at by the space ship (A). You can see a missed bullet (|) flying by the invaders. 
+
 
 
 # References
