@@ -11,7 +11,7 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
 1. Go to the website and download for your appropriate computer system
     * https://code.visualstudio.com/
 2. Open the downloaded file
-3. Activate Temporary SUDO Access
+3. Activate Temporary SUDO Access (if necessary)
     * Go to Fortune Brands Innovations Self Service
     * Click "All"
     * Click "MakeMeAdmin"
@@ -63,7 +63,7 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
 * It can transform high-level requirements into working code.
 
 * Example
-    * One of my favorite uses of this capability is to highlight modular sections of my code and have an agent write unit tests (pytests) for me. 
+    * One of my favorite uses of this capability is to highlight modular sections of my code and have an agent write unit tests (pytests). 
 
 * Demo
     * If you'd like to recreate this demo, delete test_codeComplete.py. 
@@ -112,14 +112,12 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
     * ![Explanation of snake game code 1](screenshots/code_explanation_1.png)
     * ![Explanation of snake game code 2](screenshots/code_explanation_2.png)
     * This is an example of the natural language chat feature. 
-* Gameplay image snake
+* Gameplay image "Snake"
     * ![Image of Snake Game](screenshots/snake_gameplay.png)
         * This is an image of snake travelling downwards next to a piece of food.
-* Bonus gameplay image space invaders (similarly vibe coded)
+* Bonus gameplay image "Space Invaders" (similarly vibe coded)
     * ![Image of Space Invaders Game](screenshots/space_invaders.png)
         * This is an image of the space invaders (M's) being shot at by the space ship (A). You can see a missed bullet (|) flying by the invaders. 
-
-
 
 # References
 
