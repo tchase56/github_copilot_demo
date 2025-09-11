@@ -1,4 +1,5 @@
-import matplotlib.pyplot as plt
+import numpy as np
+
 
 def area_circle(radius: float) -> float:
     """
@@ -35,16 +36,14 @@ def dot_product(vec_a: list[float], vec_b: list[float]) -> float:
                     ans += vec_a[i] * vec_b[j]
     return ans
 
-def area_of_circle(radius: float) -> float:
+def circumference_circle(radius: float) -> float:
     """
-    Calculate the area of a circle given its radius.
+    Calculate the circumference of a circle given its radius.
 
     Args:
         radius (float): The radius of the circle.
 
     Returns:
-        float: The area of the circle.
+        float: The circumference of the circle.
     """
-    return math.pi * radius * radius
-            
-        
+    return 2 * math.pi * radius
