@@ -1,12 +1,28 @@
-import statistics
+import matplotlib.pyplot as plt
 
-def define_area_of_circle(radius):
-    return math.pi * radius ** 2
-
-def define_area_circle(radius):
+def area_circle(radius: float) -> float:
+    """
+    Calculate the area of a circle given its radius.
+    
+    Args:
+        radius (float): The radius of the circle.
+    
+    Returns:
+        float: The area of the circle.
+    """
     return 3.14 * radius * radius
 
-def dot_product(vec_a, vec_b):
+def dot_product(vec_a: list[float], vec_b: list[float]) -> float:
+    """
+    Calculate the dot product of two vectors.
+
+    Args:
+        vec_a (list of float): The first vector.
+        vec_b (list of float): The second vector.
+
+    Returns:
+        float: The dot product of the two vectors.
+    """
     ans = None
     if len(vec_a) != len(vec_b):
         raise ValueError("Vectors must be of the same length")
@@ -18,5 +34,17 @@ def dot_product(vec_a, vec_b):
                 else:
                     ans += vec_a[i] * vec_b[j]
     return ans
+
+def area_of_circle(radius: float) -> float:
+    """
+    Calculate the area of a circle given its radius.
+
+    Args:
+        radius (float): The radius of the circle.
+
+    Returns:
+        float: The area of the circle.
+    """
+    return math.pi * radius * radius
             
         
