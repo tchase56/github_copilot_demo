@@ -12,7 +12,7 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
     * https://code.visualstudio.com/
 2. Open the downloaded file
 3. Activate Temporary SUDO Access (if necessary)
-    * Go to Fortune Brands Innovations Self Service
+    * Go to Self Service
     * Click "All"
     * Click "MakeMeAdmin"
 4. Drag VSCode from "Downloads" to "Applications"
@@ -83,7 +83,6 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
 * Examples
     * "How does authentication work in this project?"
     * "What's causing the memory leak in the data processing function?"
-    * "Add error handling to the payment processing service"
 
 * Demo
     * In test_codeComplete.py highlight the test_add_floats_precision() pytest and ask, "I don't fully understand this pytest. Can you explain it in detail?".
