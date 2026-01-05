@@ -1,8 +1,10 @@
-# Github Copilot (Accelerating Coding Efficiency)
+# GitHub Copilot Tutorial (Accelerate Your Software Developement)
 
 ## Summary
 
-GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio Code (and many other IDEs). It provides code suggestions, explanations, and automated coding based on natural language prompts and existing code context. Copilot has been trained on public code repositories and can assist with most programming languages and frameworks. Utilization of Github Copilot can increase your coding efficiency dramatically.
+GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio Code (and many other IDEs). It provides code suggestions, explanations, and automated coding based on natural language prompts and existing code context. Copilot has been trained on public code repositories and can assist with most programming languages and frameworks. Utilization of GitHub Copilot can increase your software development efficiency dramatically.
+
+AI coding assistants like GitHub Copilot are becoming increasingly necessary to stay competitive in today's job market. With some companies, such as Coinbase, firing developers who refused to use these tools.
 
 ## Setup
 
@@ -18,18 +20,18 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
 4. Drag VSCode from "Downloads" to "Applications"
 5. Open VSCode
 
-### Configure Github Copilot
+### Configure GitHub Copilot
 
-1. Click on the Github Copilot button in the bottom right of VSCode and then click "Sign in to Use Copilot"
+1. Click on the GitHub Copilot button in the bottom right of VSCode and then click "Sign in to Use Copilot"
     * ![Sign into copilot button](screenshots/sign_into_copilot.png)
-2. Sign in using Github
+2. Sign in using GitHub
 3. This will direct you to sign in through a browser
 
 ### Clone Repo and Open in VSCode
 1. In the VSCode terminal navigate to the folder you want to contain your repository
 2. Clone the repository
     * `git clone https://github.com/tchase56/github_copilot_demo.git`
-3. In the VSCode File Explorer and select the cloned repository folder (github_copilot_demo)
+3. In the VSCode File Explorer select the cloned repository folder (github_copilot_demo)
     * ![Select repo folder using VSCode File Explorer](screenshots/vscode_file_explorer.png)
 
 ### Set Up Python Environment
@@ -43,13 +45,13 @@ GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio C
 4. Install dependencies from uv.lock
     * `uv sync`
 
-## Github Copilot Configurations
+## GitHub Copilot Configurations
 
 ### Modes
 
 #### Ask
 
-Ask mode acts as a conversational assistant for quick help, explanations, and/or code snippets that don't directly modify your workspace files. It is useful for understanding complex code, learning new concepts, brainstorming ideas, or getting general programming advice
+Ask mode acts as a conversational assistant for quick help, explanations, and/or code snippets that don't directly modify your workspace files. It is useful for understanding complex code, learning new concepts, brainstorming ideas, or getting general programming advice.
 
 #### Edit
 
@@ -57,11 +59,11 @@ Edit mode allows Copilot to make controlled, multi-file changes based on your na
 
 #### Agent
 
-This is the most autonomous mode where copilot acts as an intelligent peer programmer. You give it a high level goal, and then it analyzes the codebase, plans the steps, makes edits across multiple files, runs terminal commands/tests, and iterates until the task is complete. It is useful for complex, open ended tasks, refactoring large parts of a project, or migrating legacy code. 
+This is the most autonomous mode where Copilot acts as an intelligent peer programmer. You give it a high level goal, and then it analyzes the codebase, plans the steps, makes edits across multiple files, runs terminal commands/tests, and iterates until the task is complete. It is useful for complex, open ended tasks, refactoring large parts of a project, or migrating legacy code. 
 
 #### Plan
 
-Before executing complex tasks in agent mode, this feature allows you to review and approve the step-by-step blueprint that copilot intends to follow providing a layer of oversight
+Before executing complex tasks in agent mode, this feature allows you to review and approve the step-by-step blueprint that Copilot intends to follow providing a layer of oversight
 
 ![Agent modes](screenshots/agent_modes.png)
 
@@ -97,7 +99,7 @@ Models include:
 * Claude Haiku 4.5
 * Claude Sonnet 4
 * Claude Sonnet 4.5
-* Gemini 2.5 Prop
+* Gemini 2.5 Pro
 * Gemini 3 Pro
 * GPT-5
 * GPT-5-Codex
@@ -111,10 +113,10 @@ Models include:
 
 ### Code Completions
 
-* Copilot provides inline code suggestions as you type, ranging from single line completions to entire function implementations. With inline code suggestions, Github Copilot predicts the next logical code chunk based on your current context.
+* Copilot provides inline code suggestions as you type, ranging from single line completions to entire function implementations. With inline code suggestions, GitHub Copilot predicts the next logical code chunk based on your current context.
 
 * Example
-    * One of my favorite uses of this capability is that if I write a class or function in python and I include type hinting properly, I can autocomplete my entire docstring 
+    * One of my favorite uses of this capability is that if I write a class or function in python and I include type hinting properly, I can autocomplete my entire docstring. 
 
 * Demo
     * If you'd like to start completely from scratch delete the version of add_floats() in codeComplete.py that already has the docstring. 
@@ -131,10 +133,10 @@ Models include:
 
 * Demo
     * If you'd like to recreate this demo, delete test_codeComplete.py. 
-    * In codeComplete.py highlight the add_floats() function, then scroll over to the github copilot "CHAT" and type "Write pytests for this function". 
+    * In codeComplete.py highlight the add_floats() function, then scroll over to the GitHub Copilot "CHAT" and type "Write pytests for this function". 
         * The highlighted function will be added as context to the LLM prompt. 
-    * Github Copilot creates a set of pytests for the add_floats() function in a new file called "test_codeComplete.py". 
-        * Click the checkmark to accept the changes suggested by Github Copilot. 
+    * GitHub Copilot creates a set of pytests for the add_floats() function in a new file called "test_codeComplete.py". 
+        * Click the checkmark to accept the changes suggested by GitHub Copilot. 
     * ![Example autonomous coding for pytests](screenshots/autonomous_coding_pytests.png)
 * Mode suggestions 
     * Edit Mode
@@ -144,8 +146,6 @@ Models include:
 
 * Use natural language to interact with your codebase through chat interfaces. 
     * Ask questions, request explanations, or specify code changes using conversational prompts.
-    * Apply changes across multiple files in your project using a single set of prompts. 
-    * Copilot analyzes your project structure and makes coordinated modifications.
 
 * Examples
     * "How does authentication work in this project?"
@@ -168,24 +168,27 @@ Models include:
         * This will look at my staged changes and automatically suggest a relevant commit message. 
     * ![Example smart actions for commit message](screenshots/smart_actions.png)
 
-## Vibe Coding a Simple Video Game
+## Autonomous Coding Example
 
-### Writing a Simple Video Game
+### Vibe Coding a Simple Video Game
 
 * If you want to recreate from scratch delete "minimalist_snake.py". 
-* Go to the Github Copilot CHAT window and type, "Can you write a very simple minimalist video game in a new python file?". 
+* Go to the GitHub Copilot CHAT window and type, "Can you write a very simple minimalist video game in a new python file?". 
     * ![Example autonomous coding for simple videogame](screenshots/simple_video_game.png)
     * This is an example of the autonomous coding feature. 
-* In the Github Copilot CHAT window type, "Can you explain this code in detail?". 
+* In the GitHub Copilot CHAT window type, "Can you explain this code in detail?". 
     * ![Explanation of snake game code 1](screenshots/code_explanation_1.png)
     * ![Explanation of snake game code 2](screenshots/code_explanation_2.png)
     * This is an example of the natural language chat feature. 
 * Gameplay image "Snake"
     * ![Image of Snake Game](screenshots/snake_gameplay.png)
-        * This is an image of snake travelling downwards next to a piece of food.
+        * This is an image of snake traveling downwards next to a piece of food.
 * Bonus gameplay image "Space Invaders" (similarly vibe coded)
     * ![Image of Space Invaders Game](screenshots/space_invaders.png)
         * This is an image of the space invaders (M's) being shot at by the space ship (A). You can see a missed bullet (|) flying by the invaders. 
+* In order to play one of these vibe coded games run the python file in the terminal. 
+    * `python minimalist_snake.py`
+    * `python minimalist_space_invaders.py`
 * Mode suggestions
     * Edit Mode
     * Agent Mode
@@ -194,11 +197,11 @@ Models include:
 
 ### Intro
 
-Generally when you merge into a branch (such as main) you create a pull request and assign a reviewer to look at the changes to ensure there are not going to be any issues. In some cases only one person may be working on a repo, or in other cases there may be man power constraints that make extensive code review prohibitively painful. But Github Copilot is here to make our lives easier in this sense as well. We can have a Github Copilot agent conduct code reviews and suggest changes on pull requests.
+Generally when you merge into a branch (such as main) you create a pull request and assign a reviewer to look at the changes to ensure there are not going to be any issues. In some cases only one person may be working on a repo, or in other cases there may be man power constraints that make extensive code review prohibitively painful. But GitHub Copilot is here to make our lives easier in this sense as well. We can have a GitHub Copilot agent conduct code reviews and suggest changes on pull requests.
 
 ### Custom Instructions (Optional)
 
-Custom instructions can be used to instruct the Github Copilot code reviewer of you or your company's formatting conventions for developers. 
+Custom instructions can be used to instruct the GitHub Copilot code reviewer of you or your company's formatting conventions for developers. 
 
 * Types of Repository Custom Instructions
     * Repository-wide custom instructions
@@ -215,7 +218,7 @@ Custom instructions can be used to instruct the Github Copilot code reviewer of 
     * Agent instructions 
         * used by AI agents
         * Supported by: Copilot coding agent
-        * You can create one of more `AGENTS.md` files, stored anywhere within the repository. 
+        * You can create one or more `AGENTS.md` files, stored anywhere within the repository. 
             * When Copilot is working, the nearest `AGENTS.md` file in the directory tree will take precedence. 
 
 ### Setup
@@ -330,3 +333,4 @@ def circumference_circle(radius: float) -> float:
 * https://code.visualstudio.com/docs/copilot/overview
 * https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions
 * https://github.blog/ai-and-ml/github-copilot/copilot-ask-edit-and-agent-modes-what-they-do-and-when-to-use-them/#:~:text=Ask%20mode:%20The%20quick%20gut,what%20I%20think%20this%20means.%E2%80%9D
+* https://techcrunch.com/2025/08/22/coinbase-ceo-explains-why-he-fired-engineers-who-didnt-try-ai-immediately/
