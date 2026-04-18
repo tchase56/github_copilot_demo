@@ -53,17 +53,13 @@ AI coding assistants like GitHub Copilot are becoming increasingly necessary to 
 
 Ask mode acts as a conversational assistant for quick help, explanations, and/or code snippets that don't directly modify your workspace files. It is useful for understanding complex code, learning new concepts, brainstorming ideas, or getting general programming advice.
 
-#### Edit
-
-Edit mode allows Copilot to make controlled, multi-file changes based on your natural language instructions. You can maintain control by choosing which specific files are in the "working set" for the AI to modify, and you review changes before they are applied. It is useful for scoped, specific updates across a defined set of files, or if you need a high degree of control over the process and the number of AI requests made. 
-
 #### Agent
 
 This is the most autonomous mode where Copilot acts as an intelligent peer programmer. You give it a high level goal, and then it analyzes the codebase, plans the steps, makes edits across multiple files, runs terminal commands/tests, and iterates until the task is complete. It is useful for complex, open ended tasks, refactoring large parts of a project, or migrating legacy code. 
 
 #### Plan
 
-Before executing complex tasks in agent mode, this feature allows you to review and approve the step-by-step blueprint that Copilot intends to follow providing a layer of oversight
+Before executing complex tasks in agent mode, this feature allows you to review and approve the step-by-step blueprint that Copilot intends to follow providing a layer of oversight.
 
 ![Agent modes](screenshots/agent_modes.png)
 
