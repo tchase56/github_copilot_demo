@@ -77,6 +77,12 @@ Models include:
 * GPT-4.1
 * GPT-4o
 * GPT-5 mini
+
+#### 0.25x Models
+
+These models use one-quarter of a standard request credit (one request credit is equivalent to 4 cents).
+
+Models include: 
 * Grok Code Fast 1
 
 #### 0.33x Models
@@ -85,22 +91,31 @@ These models use one-third of a standard request credit (one request credit is e
 
 Models include: 
 * Claude Haiku 4.5
-* GPT-5.1-Codex-Mini
+* Gemini 3 Flash
+* GPT-5.4 mini
 
 #### 1x Models
 
 These models use one standard request credit (one request credit is equivalent to 4 cents).
 
 Models include: 
-* Claude Haiku 4.5
 * Claude Sonnet 4
+* Claude Sonnet 4.6
+* GPT-5.4
 * Claude Sonnet 4.5
 * Gemini 2.5 Pro
-* Gemini 3 Pro
-* GPT-5
-* GPT-5-Codex
-* GPT-5.1
-* GPT-5.1-Codex
+* Gemini 3.1 Pro
+* GPT-5.2
+* GPT-5.2-Codex
+* GPT-5.3-Codex
+
+#### 3x Models
+
+These models use three standard request credits (one request credit is equivalent to 4 cents).
+
+Models include: 
+* Claude Opus 4.6
+* Claude Opus 4.5
 
 ![LLMs available](screenshots/LLMs_available.png)
 
@@ -111,13 +126,22 @@ Models include:
 
 * Copilot provides inline code suggestions as you type, ranging from single line completions to entire function implementations. With inline code suggestions, GitHub Copilot predicts the next logical code chunk based on your current context.
 
-* Example
-    * One of my favorite uses of this capability is that if I write a class or function in python and I include type hinting properly, I can autocomplete my entire docstring. 
+* Examples
+    * Writing a simple function from a comment
+    * Writing a docstring for an existing function or class
 
 * Demo
-    * If you'd like to start completely from scratch delete the version of add_floats() in codeComplete.py that already has the docstring. 
-    * In codeComplete.py start typing your docstring and it should provide an option to autocomplete, you can accept the changes by clicking "tab". 
-    * ![Example code completion for docstring](screenshots/code_completion.png)
+    * Write a simple function from a comment
+        * In codeComplete.py start typing your function below the comment and it should provide an option to autocomplete. You can accept the changes by hitting tab, or by clicking accept next to the completion. 
+        * ![Example code completion from comment before completion](screenshots/code_completion_from_comment_before.png)
+        * ![Example code completion from comment after completion](screenshots/code_completion_from_comment_after.png)
+
+
+    * Write a docstring for an existing function or class
+        * In codeComplete.py start typing your docstring and it should provide an option to autocomplete. You can accept the changes by hitting "tab", or by clicking accept next to the completion. 
+        * ![Example code completion for docstring before completion](screenshots/code_completion_for_docstring_before.png)
+        * ![Example code completion for docstring after completion](screenshots/code_completion_for_docstring_after.png)
+
 
 ### Autonomous Coding
 
@@ -129,14 +153,12 @@ Models include:
 
 * Demo
     * If you'd like to recreate this demo, delete test_codeComplete.py. 
+    * Ensure your github copilot chat is in "Agent" mode. 
     * In codeComplete.py highlight the add_floats() function, then scroll over to the GitHub Copilot "CHAT" and type "Write pytests for this function". 
         * The highlighted function will be added as context to the LLM prompt. 
     * GitHub Copilot creates a set of pytests for the add_floats() function in a new file called "test_codeComplete.py". 
         * Click the checkmark to accept the changes suggested by GitHub Copilot. 
     * ![Example autonomous coding for pytests](screenshots/autonomous_coding_pytests.png)
-* Mode suggestions 
-    * Edit Mode
-    * Agent Mode
 
 ### Natural Language Chat
 
@@ -144,8 +166,8 @@ Models include:
     * Ask questions, request explanations, or specify code changes using conversational prompts.
 
 * Examples
-    * "How does authentication work in this project?"
-    * "What's causing the memory leak in the data processing function?"
+    * What is this part of the function/class doing?
+    * How can I make this section of my code run faster?
 
 * Demo
     * In test_codeComplete.py highlight the test_add_floats_precision() pytest and ask, "I don't fully understand this pytest. Can you explain it in detail?".
