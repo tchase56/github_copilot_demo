@@ -153,7 +153,7 @@ Models include:
 
 * Demo
     * If you'd like to recreate this demo, delete test_codeComplete.py. 
-    * Ensure your github copilot chat is in "Agent" mode. 
+    * Ensure your GitHub Copilot chat is in "Agent" mode. 
     * In codeComplete.py highlight the add_floats() function, then scroll over to the GitHub Copilot "CHAT" and type "Write pytests for this function". 
         * The highlighted function will be added as context to the LLM prompt. 
     * GitHub Copilot creates a set of pytests for the add_floats() function in a new file called "test_codeComplete.py". 
@@ -170,11 +170,10 @@ Models include:
     * How can I make this section of my code run faster?
 
 * Demo
+    * Ensure your GitHub Copilot is in "Ask" mode
     * In test_codeComplete.py highlight the test_add_floats_precision() pytest and ask, "I don't fully understand this pytest. Can you explain it in detail?".
     * We can also ask follow ups such as, "What would happen without pytest.approx?". 
     * ![Example natural language chat](screenshots/natural_language_chat.png)
-* Mode suggestions
-    * Ask Mode
 
 ### Smart Actions
 
@@ -185,6 +184,44 @@ Models include:
     * If I add my generated pytests in test_codeComplete.py to the staged changes in the "Source Control" tab in VSCode I can click on the "generate commit message" button that looks like two stars. 
         * This will look at my staged changes and automatically suggest a relevant commit message. 
     * ![Example smart actions for commit message](screenshots/smart_actions.png)
+
+## Advanced Features
+
+### Slash Commands
+
+Slash commands in GitHub Copilot are predefined instructions starting with a "/" that allow rapid access to specific AiI functionalities in the Chat. 
+
+Examples: 
+* `/fix`: Propose a fix for the selected code
+* `/explain`: provides a detailed explanation of the selected code
+* `/tests`: generates unit tests for the selected code
+
+You can also Create custom slash commands. These commands need a yaml header with a name and description. They also need so be saved in `.github/prompts` and they need to have a `.prompt` suffix. 
+
+### Custom Instructions
+
+You can configure github copilot to follow custom instructions. These instructions can exist at the personal level, the repository level, or the organization level. In our example here we will focus on the repository level. 
+
+Any instructions you would like GitHub Copilot to follow should be placed in the following document: `.github/copilot-instructions.md`
+
+In the screenshot below we can see instruction that require copilot generated code to:
+* generate docstrings
+* follow the Google docstring convention
+* include type hinting
+
+![Custom instructions followed at the repository level](screenshots/custom_instructions.png)
+
+If you want custom instructions only for specific file types this is also supported via apply to glob patterns placed at the top of the instructions. 
+
+![Custom instructions for specific file types](screenshots/custom_instructions_file_type.png)
+
+And the instructions file must be in the appropriate location with the appropriate suffix. They should be in the `.github/instructions` folder with the `.instructions` suffix. 
+
+For example: 
+`.github/instructions/react.instructions.md`
+
+If you would like github copilot to manually walk you through the process of generating custom instructions, make sure your GitHub Copilot chat is in "Agent" mode and type `/create-instructions`. If you want to verify which instructions are active you can check by typing `/instructions` into your GitHub Copilot chat. 
+
 
 ## Autonomous Coding Example
 
