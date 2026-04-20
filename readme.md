@@ -4,7 +4,7 @@
 
 GitHub Copilot is an AI-powered coding assistant integrated into Visual Studio Code (and many other IDEs). It provides code suggestions, explanations, and automated coding based on natural language prompts and existing code context. Copilot has been trained on public code repositories and can assist with most programming languages and frameworks. Utilization of GitHub Copilot can increase your software development efficiency dramatically.
 
-AI coding assistants like GitHub Copilot are becoming increasingly necessary to stay competitive in today's job market. With some companies, such as Coinbase, firing developers who refused to use these tools.
+AI coding assistants like GitHub Copilot are becoming increasingly necessary to stay competitive in today's job market. With some companies firing developers who refused to use these tools.
 
 ## Setup
 
@@ -145,8 +145,7 @@ Models include:
 
 ### Autonomous Coding
 
-* VS Code and agent mode can autonomously plan and execute complex development tasks, coordinating multi-step workflows that involve running terminal commands or invoking specialized tools. 
-* It can transform high-level requirements into working code.
+VS Code and agent mode can autonomously plan and execute complex development tasks, coordinating multi-step workflows that involve running terminal commands or invoking specialized tools. It can transform high-level requirements into working code.
 
 * Example
     * One of my favorite uses of this capability is to highlight modular sections of my code and have an agent write unit tests (pytests). 
@@ -162,8 +161,8 @@ Models include:
 
 ### Natural Language Chat
 
-* Use natural language to interact with your codebase through chat interfaces. 
-    * Ask questions, request explanations, or specify code changes using conversational prompts.
+Use natural language to interact with your codebase through chat interfaces. 
+* Ask questions, request explanations, or specify code changes using conversational prompts.
 
 * Examples
     * What is this part of the function/class doing?
@@ -177,8 +176,7 @@ Models include:
 
 ### Smart Actions
 
-* VS Code has many predefined actions for common development tasks that are enhanced with AI capabilities and integrated into the editor.
-    * From helping you write commit messages or pull requests descriptions, renaming code symbols, fixing errors in the editor, to semantic search that helps you find relevant files.
+VS Code has many predefined actions for common development tasks that are enhanced with AI capabilities and integrated into the editor. From helping you write commit messages or pull requests descriptions, renaming code symbols, fixing errors in the editor, to semantic search that helps you find relevant files.
 
 * Demo
     * If I add my generated pytests in test_codeComplete.py to the staged changes in the "Source Control" tab in VSCode I can click on the "generate commit message" button that looks like two stars. 
@@ -241,11 +239,11 @@ We can easily generate code by having a conversation with GitHub Copilot chat in
     * ![game description prompt](screenshots/game_description.png)
         * This is a prompt that will help a user plan out their game and save the detailed description. 
             * If the game is already well known it will auto populate the details. 
-        * in our example it creates a detailed game description in `space_invaders.md`
+        * In our example it creates a detailed game description in `space_invaders.md`
 3. Create a blank `implement_space_invaders.prompt.md` that we will populate with our detailed implementation instructions. 
 4. Use "Agent" mode to create a detailed prompt to implement the space invaders game. 
     * ![game implementation prompt creation](screenshots/game_implementation_prompt_creation.png)
-        * give the chat `space_invaders.md` and the blank `implement_space_invaders.prompt.md` files by opening these files, then selecting the "+" button in the chat to ensure they are in the context of our prompt. 
+        * Give the chat `space_invaders.md` and the blank `implement_space_invaders.prompt.md` files by opening these files, then selecting the "+" button in the chat to ensure they are in the context of our prompt. 
         * This creates the prompt that we will use to create our game: `implement_space_invaders.prompt.md`
 5. Finally we generate our game using `implement_space_invaders.prompt.md`
     * ![create space invaders using prompt](screenshots/implement_using_prompt.png)
