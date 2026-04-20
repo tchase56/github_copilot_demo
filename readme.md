@@ -278,17 +278,6 @@ Generally when you merge into a branch (such as main) you create a pull request 
         4. Performance
         5. Best Practices & Style
         6. Documentation & Maintainability
-4. If custom instructions are desired, under "General settings" toggle on "Use custom instructions when reviewing pull requests". (Optional)
-    * ![Toggle for Github Copilot code review](screenshots/github_copilot_code_review_toggle.png)
-    *  Create repository-wide custom instructions
-        * Ask Copilot coding agent to generate `copilot-instructions.md` file
-            1. https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions#asking-copilot-coding-agent-to-generate-a-copilot-instructionsmd-file
-        * Writing your own `copilot-instructions.md` file
-            1. In the root of your repository, create a file named `.github/copilot-instructions.md`.
-                * Create the `.github` directory if it does not already exist.
-            2. Add natural language instructions to the file, in Markdown format.
-                * Whitespace between instructions is ignored, so the instructions can be written as a single paragraph, each on a new line, or separated by blank lines for legibility.
-
 
 ### Examples
 
