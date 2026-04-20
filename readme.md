@@ -198,6 +198,10 @@ Examples:
 
 You can also Create custom slash commands. These commands need a yaml header with a name and description. They also need so be saved in `.github/prompts` and they need to have a `.prompt` suffix. 
 
+Examples to be used later in this demo: 
+* `/game_description`: walks user through creating a detailed description for simple arcade game they would like to create
+* `/implement_space_invaders`: Creates a simple version of space invaders using the curses library
+
 ### Custom Instructions
 
 You can configure github copilot to follow custom instructions. These instructions can exist at the personal level, the repository level, or the organization level. In our example here we will focus on the repository level. 
@@ -227,54 +231,35 @@ If you would like github copilot to manually walk you through the process of gen
 
 ### Vibe Coding a Simple Video Game
 
-* If you want to recreate from scratch delete "minimalist_snake.py". 
-* Go to the GitHub Copilot CHAT window and type, "Can you write a very simple minimalist video game in a new python file?". 
-    * ![Example autonomous coding for simple videogame](screenshots/simple_video_game.png)
-    * This is an example of the autonomous coding feature. 
-* In the GitHub Copilot CHAT window type, "Can you explain this code in detail?". 
-    * ![Explanation of snake game code 1](screenshots/code_explanation_1.png)
-    * ![Explanation of snake game code 2](screenshots/code_explanation_2.png)
-    * This is an example of the natural language chat feature. 
-* Gameplay image "Snake"
-    * ![Image of Snake Game](screenshots/snake_gameplay.png)
-        * This is an image of snake traveling downwards next to a piece of food.
-* Bonus gameplay image "Space Invaders" (similarly vibe coded)
-    * ![Image of Space Invaders Game](screenshots/space_invaders.png)
-        * This is an image of the space invaders (M's) being shot at by the space ship (A). You can see a missed bullet (|) flying by the invaders. 
-* In order to play one of these vibe coded games run the python file in the terminal. 
-    * `python minimalist_snake.py`
-    * `python minimalist_space_invaders.py`
-* Mode suggestions
-    * Edit Mode
-    * Agent Mode
+We can easily generate code by having a conversation with GitHub Copilot chat in agent mode. But we are going to do this in a way that is more explicit, generates documentation that we can review/iterate on, and will be less error prone. 
+
+1. If you want to recreate everything from scratch delete the following files
+    * `space_invaders.md`
+    * `implement_space_invaders.prompt.md`
+    * `space_invaders.py`
+2. Use the `/game_description` slash command to generate a description for the game that we want to code. 
+    * ![game description prompt](screenshots/game_description.png)
+        * This is a prompt that will help a user plan out their game and save the detailed description. 
+            * If the game is already well known it will auto populate the details. 
+        * in our example it creates a detailed game description in `space_invaders.md`
+3. Create a blank `implement_space_invaders.prompt.md` that we will populate with our detailed implementation instructions. 
+4. Use "Agent" mode to create a detailed prompt to implement the space invaders game. 
+    * ![game implementation prompt creation](screenshots/game_implementation_prompt_creation.png)
+        * give the chat `space_invaders.md` and the blank `implement_space_invaders.prompt.md` files by opening these files, then selecting the "+" button in the chat to ensure they are in the context of our prompt. 
+        * This creates the prompt that we will use to create our game: `implement_space_invaders.prompt.md`
+5. Finally we generate our game using `implement_space_invaders.prompt.md`
+    * ![create space invaders using prompt](screenshots/implement_using_prompt.png)
+
+In the future if bugs come up or if we have to generate additional features we have the advantage of having the game description (`space_invaders.md`) and the exact prompt that was used to create the game (`.github/prompts/implement_space_invaders.prompt.md`) pushed to our repo. 
+
+![space invaders gameplay](screenshots/space_invaders_gameplay.png)
+
 
 ## Copilot Code Review
 
 ### Intro
 
 Generally when you merge into a branch (such as main) you create a pull request and assign a reviewer to look at the changes to ensure there are not going to be any issues. In some cases only one person may be working on a repo, or in other cases there may be man power constraints that make extensive code review prohibitively painful. But GitHub Copilot is here to make our lives easier in this sense as well. We can have a GitHub Copilot agent conduct code reviews and suggest changes on pull requests.
-
-### Custom Instructions (Optional)
-
-Custom instructions can be used to instruct the GitHub Copilot code reviewer of you or your company's formatting conventions for developers. 
-
-* Types of Repository Custom Instructions
-    * Repository-wide custom instructions
-        * apply to all requests made in the context of a repository
-        * Supported by: Copilot Chat, Copilot coding agent, and Copilot code review
-        * specified in .github/copilot-instructions.md
-    * Path-specific custom instructions
-        * apply to requests made in the context of files that match a specified path
-        * Supported by: Copilot coding agent, and Copilot code review
-        * these are specified in one or more `NAME.instructions.md` files within `.github/instructions` directory in the repository. 
-        * You can find more details in the following link
-            * https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions#creating-path-specific-custom-instructions-1
-        * If the path you specify matches a file that Copilot is working on, and a repository-wide custom instructions file also exists, then the instructions from both files are used. 
-    * Agent instructions 
-        * used by AI agents
-        * Supported by: Copilot coding agent
-        * You can create one or more `AGENTS.md` files, stored anywhere within the repository. 
-            * When Copilot is working, the nearest `AGENTS.md` file in the directory tree will take precedence. 
 
 ### Setup
 
